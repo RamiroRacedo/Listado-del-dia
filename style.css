@@ -1,2 +1,43 @@
+<<<<<<< HEAD
 
 
+=======
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#titlebar {
+    background: black;
+    color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btnAction {
+    width: 20px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+#minimizeBtn{
+    background-image: url(Imagenes/Minimizar.png);
+    background-size: contain;
+}
+
+#maximizeBtn{
+    background-image: url(Imagenes/Maximizar.png);
+    background-size: contain;
+
+
+}
+
+#closeBtn{
+    background-image: url(Imagenes/Close.png);
+    background-size: contain;
+
+
+}
+>>>>>>> ed49c93d7468ed6cf5b5ff323bef593f1a4f986f
