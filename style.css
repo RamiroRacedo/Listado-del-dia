@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#titlebar {
+    background: black;
+    color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btnAction {
+    width: 20px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+#minimizeBtn{
+    background-image: url(Imagenes/icons8-apple-arcade-48.png);
+    background-size: contain;
+}
+
+#maximizeBtn{
+    background-image: url(Imagenes/icons8-james-bond-48.png);
+    background-size: contain;
+
+
+}
+
+#closeBtn{
+    background-image: url(Imagenes/icons8-google-play-48.png);
+    background-size: contain;
+
+
+}
