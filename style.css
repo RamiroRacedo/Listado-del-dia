@@ -19,19 +19,19 @@ html, body {
 }
 
 #minimizeBtn{
-    background-image: url(Imagenes/icons8-apple-arcade-48.png);
+    background-image: url(Imagenes/Minimizar.png);
     background-size: contain;
 }
 
 #maximizeBtn{
-    background-image: url(Imagenes/icons8-james-bond-48.png);
+    background-image: url(Imagenes/Maximizar.png);
     background-size: contain;
 
 
 }
 
 #closeBtn{
-    background-image: url(Imagenes/icons8-google-play-48.png);
+    background-image: url(Imagenes/Close.png);
     background-size: contain;
 
 
