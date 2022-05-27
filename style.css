@@ -1,0 +1,65 @@
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#titlebar {
+    background: black;
+    color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#titleBar > #title {
+    list-style: none;
+    padding: 0;
+    background: #092327;
+    width: 90%;
+    max-width: 1000px;
+    margin:auto;
+}
+
+
+.btnActions li btnAction {
+    text-decoration: none;
+    color: white;
+    padding: 50px;
+    display: block;
+}
+
+#minimizeBtn{
+    background-image: url(Imagenes/Minimizar.png);
+    background-size: contain;
+}
+
+#maximizeBtn{
+    background-image: url(Imagenes/Maximizar.png);
+    background-size: contain;
+
+
+}
+
+#closeBtn{
+    background-image: url(Imagenes/Close.png);
+    background-size: contain;
+
+
+}
+
+#app{
+    list-style: none;
+    padding: 0;
+    background: #092327;
+    width: 90%;
+    max-width: 1000px;
+    margin:auto;
+}
+
+.titlebar li{
+    display: inline-block;
+    text-align: center;
+}
