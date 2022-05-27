@@ -1,0 +1,16 @@
+{
+  "name": "tareas diarias",
+  "productName": "tareas diarias",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "Ramiro",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "18.0.3"
+  }
+}

@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 
 
-=======
+
 html, body {
     margin: 0;
     padding: 0;
@@ -15,11 +14,21 @@ html, body {
     justify-content: space-between;
 }
 
-.btnAction {
-    width: 20px;
-    height: 30px;
-    border: none;
-    background-color: transparent;
+#titleBar > #title {
+    list-style: none;
+    padding: 0;
+    background: #092327;
+    width: 90%;
+    max-width: 1000px;
+    margin:auto;
+}
+
+
+.btnActions li btnAction {
+    text-decoration: none;
+    color: white;
+    padding: 50px;
+    display: block;
 }
 
 #minimizeBtn{
@@ -40,4 +49,17 @@ html, body {
 
 
 }
->>>>>>> ed49c93d7468ed6cf5b5ff323bef593f1a4f986f
+
+#app{
+    list-style: none;
+    padding: 0;
+    background: #092327;
+    width: 90%;
+    max-width: 1000px;
+    margin:auto;
+}
+
+.titlebar li{
+    display: inline-block;
+    text-align: center;
+}
