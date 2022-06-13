@@ -3,69 +3,7 @@
 <meta charset="utf-8">
 <head>
     <style>
-        ul {
-            padding:0px;
-        }
- 
-        li {
-            list-style-type: none;
-            position: relative;
-            margin: 2px;
-            padding: 0.5em 0.5em 0.5em 2em;
-            background: #87CEEB;
-            font-family: sans-serif;
-        }
- 
-        li div {
-            display:none;
-            float:right;
-        }
- 
-        li div span {
-            margin-left:10px;
-            background-color:#808080;
-            padding:3px 8px;
-            border-radius: 8px;
-            color:#fff;
-            cursor:pointer;
-        }
- 
-        li:hover div {display:inline;}
- 
-        li.ok {
-            background: #CCFF99;
-        }
- 
-        li.ok::before {
-            content: '';
-            position: absolute;
-            border-color: #009933;
-            border-style: solid;
-            border-width: 0 0.3em 0.25em 0;
-            height: 1em;
-            top: 1.3em;
-            left: 0.6em;
-            margin-top: -1em;
-            transform: rotate(45deg);
-            width: 0.5em;
-        }
- 
-        li.ko {
-            background: #FF9999;
-        }
- 
-        li.ko::before {
-            content: 'X';
-            position: absolute;
-            font-size:1.3em;
-            font-weight:bold;
-            color: #990000;
-            height: 1em;
-            top: 1.3em;
-            left: 0.4em;
-            margin-top: -1em;
-            width: 0.5em;
-        }
+        
     </style>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -86,15 +24,16 @@
         </div>
     <div id="content"></div>    
     </div>
-    <div id="rojo" style="background-color: rgb(252, 7, 7);">
+    <div class="titulo" style="text-align: center;">
         <h1>TAREAS DIARIAS</h1>
     </div>
 
-    <div id="aqua" style="background-color:aqua">
+    <div id="Imagensita" style="background-color:aqua">
 
-        <img src="imagen 1.jpg" height="250px"> 
+        <img src="imagen 1.jpg" height="250px" alt="Imagensita"> 
         <p>Racedo's industries</p>
-    <div id="Azul" style="background-color:rgb(152, 205, 119);">
+    
+    <div id="Azul" style="background-color:aqua;">
 
         <p><b>Nombre:</b> <i>Ramiro</i></p>
         <p><b>Apellido:</b> <i>Racedo</i></p>
@@ -130,6 +69,7 @@ list.addEventListener('click', function(ev) {
 }, false);
  
 </script>
- 
+  
 </body>
 </html>
+</div>
