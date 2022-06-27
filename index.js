@@ -18,9 +18,9 @@ fetch('components/nav.html')
     newElement.innerHTML = htmlNav;
     oldElement.parentNode.replaceChild(newElement, oldElement);
 
-    const closeBtn = document.getElementById("closeBtn")
-    const minimizeBtn = document.getElementById("minimizeBtn")
-    const maimizeBtn = document.getElementById("maximizeBtn")
+    const closeBtn = document.getElementById("closeBtn");
+    const minimizeBtn = document.getElementById("minimizeBtn");
+    const maimizeBtn = document.getElementById("maximizeBtn");
     const showHideMenus = document.getElementById("showHideMenus");
     const nav = document.getElementById("nav");
 

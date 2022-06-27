@@ -5,10 +5,10 @@ app.disableHardwareAcceleration()
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1200,
-    height: 600,
-    minWidth: 600,
-    minHeight: 480,
+    width: 780,
+    height: 640,
+    minWidth: 400,
+    minHeight: 600,
     frame: false,
     webPreferences: {
       nodeIntegration: true,
