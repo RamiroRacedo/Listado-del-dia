@@ -21,6 +21,6 @@ function createWindow() {
     })
 }
 
-app.whenReady(). then() => {
+app.whenReady(). then() => ({
     createWindow()
 })
