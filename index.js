@@ -2,71 +2,46 @@ const { ipcRenderer } = require("electron")
 
 var isLeftMenuAactive = false
 
-var minimizeBtn = null;
-var maxResBtn = null;
-var closeBtn = null;
-var showHideMenus = null;
-var nav = null;
 
+const closeBtn = document.getElementById("closeBtn");
+const minimizeBtn = document.getElementById("minimizeBtn");
+const maximizeBtn = document.getElementById("maximizeBtn");
+const titlebar = document.getElementById("titlebar");
 
-fetch('components/nav.html')
-  .then(res => res.text())
-  .then(htmlNav => {
+minimizeBtn.addEventListener('click', () => {
+  ipcRenderer.send('minimizeApp')
+})
+maximizeBtn.addEventListener('click', () => {
+  ipcRenderer.send('maximizeRestoreApp')
+})
+closeBtn.addEventListener('click', () => {
+  ipcRenderer.send('closeApp')
+})
 
-    let oldElement = document.querySelector("script#replace_with_navbar");
-    let newElement = document.createElement("div");
-    newElement.innerHTML = htmlNav;
-    oldElement.parentNode.replaceChild(newElement, oldElement);
-
-    const closeBtn = document.getElementById("closeBtn");
-    const minimizeBtn = document.getElementById("minimizeBtn");
-    const maimizeBtn = document.getElementById("maximizeBtn");
-    const showHideMenus = document.getElementById("showHideMenus");
-    const nav = document.getElementById("nav");
-
-    minimizeBtn.addEventListener('click', () => {
-      ipcRenderer.send('minimizeApp')
-    })
-    maxResBtn.addEventListener('click', () => {
-      ipcRenderer.send('maximizeRestoreApp')
-    })
-    closeBtn.addEventListener('click', () => {
-      ipcRenderer.send('closeApp')
-    })
-    showHideMenus.addEventListener('click', () => {
-      if (isLeftMenuAactive) {
-        mySidebar.style.width = '0px'
-        isLeftMenuAactive = false
-      } else {
-        mySidebar.style.width = '280px'
-        isLeftMenuAactive = true
-      }
-    })
-  })
 
 
 function changeMaxResBtn(isMaximizedApp) {
   if (isMaximizedApp) {
-    maxResBtn.title = 'Restore'
-    maxResBtn.classList.remove("maximizeBtn")
-    maxResBtn.classList.add("restoreBtn")
+    maximizeBtn.title = 'Restore'
+    maximizeBtn.classList.remove("maximizeBtn")
+    maximizeBtn.classList.add("restoreBtn")
   } else {
-    maxResBtn.title = 'Maximize'
-    maxResBtn.classList.remove("restoreBtn")
-    maxResBtn.classList.add("maximizeBtn")
+    maximizeBtn.title = 'Maximize'
+    maximizeBtn.classList.remove("restoreBtn")
+    maximizeBtn.classList.add("maximizeBtn")
   }
 }
 
 ipcRenderer.on("isMaximized", () => {
-  changeMaxResBtn(true)
+  changemaximizeBtn(true)
 })
 ipcRenderer.on("isRestored", () => {
-  changeMaxResBtn(false)
+  changemaximizeBtn(false)
 })
 
 ipcRenderer.on("isFocus", () => {
-  nav.classList.remove("blur")
+  titlebar.classList.remove("blur")
 })
 ipcRenderer.on("isBlur", () => {
-  nav.classList.add("blur")
+  titlebar.classList.add("blur")
 })

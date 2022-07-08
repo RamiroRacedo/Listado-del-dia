@@ -1,3 +1,10 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 @keyframes slide {
 	0% { transform: translateX(0); }
 	10% { transform: translateX(0); }
@@ -24,6 +31,8 @@ html { scroll-behavior: smooth; }
 
 body {
 	font-family: sans-serif;
+    margin: 0%;
+    height: 100px;
 }
 
 .wrapper {
@@ -127,7 +136,7 @@ body {
 }
 #Imagensita {
     text-align: center;
-   margin: auto;
+    margin: auto;
 }
 ul {
     padding:0px;
@@ -200,61 +209,66 @@ li.ko::before {
 }
 
 #titleBar {
-    background: rgb(114, 111, 111);
+    background: rgb(150, 208, 255);
     color: rgb(0, 0, 0);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 20px;
+    height: 32px;
+
 }
 
-#titleBar > .title{
+#titleBar #title{
     font-size: 12px;
+    flex: 1;
+    text-align: center;
     -webkit-app-region: drag;
 }
 
 .btnAction {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border: none;
     background-color: transparent;
-    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px;
+}
+
+.btnAction:hover {
+    background-color: rgb(75, 237, 227);
 }
 
 #minimizeBtn{
-    background-image: url(Imagenes/Minimizar.png);
-    background-size: contain;
-    
+    background-image: url(Imagenes/Minimizar.png);    
 }
 
 #maximizeBtn{
     background-image: url(Imagenes/Maximizar.png);
-    background-size: contain;
-    
-
-
 }
 
 #closeBtn{
     background-image: url(Imagenes/Close.png);
-    background-size: contain;
-    
-
-
 }
-#showHideMenus{
-    background-image: url(Imagenes/MenuIcon4.png);
-    background-size:contain ;
+#closeBtn:hover{
+    background-color: rgb(237, 75, 75);
 }
 
 #app{
     list-style: none;
     padding: 0;
-    background: #092327;
+    background: green;
     width: 90%;
     max-width: 1000px;
     margin:auto;
 }
 #title {
     margin-left: 300px;
+}
+element.style {
+    position: absolute;
+    height: 100%;
+    margin: 0%;
+    overflow: auto;
+    top: 32px;
 }
