@@ -45,9 +45,7 @@ Image:
 ## Estructura del projecto
 
 Un mejor ordenamiento para los archivos:
-
-|                |                                        
-|----------------|----------------------------------------|
-|Base de datos   | Todos los requerimientos del projecto  |            
-|Visual studio   | Todo el codigo del projecto            |
-|Figma           |    Los diseños del projecto    
+  Trabajo     | 
+------------- | -------------
+Base de datos | Requerimientos del projecto
+Projecto      | Todo el codigo del projecto 
