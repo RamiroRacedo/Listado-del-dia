@@ -50,7 +50,7 @@ Un mejor ordenamiento para los archivos:
 |Base de datos | Requerimientos del projecto |
 |Projecto      | Todo el codigo del projecto |
 
-| First Header  | Second Header |
+|    TRABAJO    |               |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| V.S.C         | Codigo        |
+| BASE DE DATOS | Objetos del P |
