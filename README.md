@@ -45,7 +45,12 @@ Image:
 ## Estructura del projecto
 
 Un mejor ordenamiento para los archivos:
-  Trabajo     | 
-------------- | -------------
-Base de datos | Requerimientos del projecto
-Projecto      | Todo el codigo del projecto 
+| Trabajo      | 
+|--------------|-----------------------------|
+|Base de datos | Requerimientos del projecto |
+|Projecto      | Todo el codigo del projecto |
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
