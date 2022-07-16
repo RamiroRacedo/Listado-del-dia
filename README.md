@@ -34,9 +34,10 @@ Ramiro Racedo David
 
 ###imagenes
 
-Image:
+                           Image:
 
-(https://pandao.github.io/editor.md/Este_equipo/Descargas/landscape_wallpaper_by_hardii_d9krnqm-pre.jpg)
+![tristexa](https://user-images.githubusercontent.com/105503025/179366475-9fd5e8aa-2153-43ad-9dd6-8177714776bf.jpg)
+
 
 
 
