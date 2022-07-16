@@ -36,11 +36,7 @@ Ramiro Racedo David
 
                            Image:
 
-![tristexa](https://user-images.githubusercontent.com/105503025/179366475-9fd5e8aa-2153-43ad-9dd6-8177714776bf.jpg)
-
-
-
-
+![descarga (1)](https://user-images.githubusercontent.com/105503025/179366883-29ddb5e5-9e28-4da6-9803-74a60778ba18.jpg)
 
 
 ## Estructura del projecto
