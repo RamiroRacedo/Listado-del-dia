@@ -1,33 +1,15 @@
 const { ipcRenderer } = require("electron")
 
-var isLeftMenuAactive = false
-
-var minimizeBtn = null;
-var maxResBtn = null;
-var closeBtn = null;
-var showHideMenus = null;
-var nav = null;
 
 
-// Aquí traemos el HTML del nav y lo incrustamos:
-fetch('components/nav.html')
-  .then(res => res.text())
-  .then(htmlNav => {
-    // Elemento base es el script
-    let oldElement = document.querySelector("script#replace_with_navbar");
-    // Elemento nuevo es un div donde irá el html del nav
-    let newElement = document.createElement("div");
-    newElement.innerHTML = htmlNav;
-    // Remplazamos el base por el nuevo
-    oldElement.parentNode.replaceChild(newElement, oldElement);
 
 
     // Buscamos los elementos.
-    minimizeBtn = document.getElementById("minimizeBtn");
-    maxResBtn = document.getElementById("maxResBtn");
-    closeBtn = document.getElementById("closeBtn");
-    showHideMenus = document.getElementById("showHideMenus");
-    nav = document.getElementById("nav");
+   const minimizeBtn = document.getElementById("minimizeBtn");
+   const maxResBtn = document.getElementById("maximizeBtn");
+   const closeBtn = document.getElementById("closeBtn");
+   const showHideMenus = document.getElementById("showHideMenus");
+   const titlebar = document.getElementById("titlebar");
 
 
     // Añadimos los eventos para cada clic enviando desde
@@ -35,7 +17,7 @@ fetch('components/nav.html')
     minimizeBtn.addEventListener('click', () => {
       ipcRenderer.send('minimizeApp')
     })
-    maxResBtn.addEventListener('click', () => {
+    maximizeResBtn.addEventListener('click', () => {
       ipcRenderer.send('maximizeRestoreApp')
     })
     closeBtn.addEventListener('click', () => {
@@ -50,7 +32,6 @@ fetch('components/nav.html')
         isLeftMenuAactive = true
       }
     })
-  })
 
 
 // Funcion para cambiar el icono de maximizar y restaurar.

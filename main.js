@@ -18,7 +18,7 @@ function createWindow() {
   })
 
   win.loadFile(`${__dirname}/index.html`);
-
+  win.openDevTools()
 
   ipcMain.on('minimizeApp', () => {
     win.minimize()
