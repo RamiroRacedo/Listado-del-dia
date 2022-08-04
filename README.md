@@ -5,7 +5,7 @@ Esta aplicacion tendra como objetivo,tener un listado de nuestras tareas diarias
 
 ## Programadores
 Santino Malone Alonso
-Celeste Torrez 
+Celeste Torrez Carmen 
 Ramiro Racedo David
 
 
