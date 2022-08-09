@@ -31,14 +31,6 @@ Ramiro Racedo David
  - [x] Movilidad de la pagina (Santino Malone)
 
 
-
-###imagenes
-
-                           Image:
-
-![descarga (1)](https://user-images.githubusercontent.com/105503025/179366883-29ddb5e5-9e28-4da6-9803-74a60778ba18.jpg)
-
-
 ## Estructura del projecto
 
 Un mejor ordenamiento para los archivos:
