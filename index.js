@@ -45,3 +45,4 @@ ipcRenderer.on("isFocus", () => {
 ipcRenderer.on("isBlur", () => {
   titlebar.classList.add("blur")
 })
+
