@@ -278,8 +278,12 @@ li.ko::before {
     background-color: #32373e;
 }
 
-#titleBar #focus {
-    color:#009933 ;
-    background-color:#009959;
+#Listado{
+    display: flex;
+    
+
 }
 
+#Azul{
+     float: left;
+}
