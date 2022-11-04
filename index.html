@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <style>
+
+    </style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> Datos Personales </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script defer src='index.js'></script>
+</head>
+
+<body>
+    <div id="App">
+        <div id="titleBar" class="blur">
+            <div id="title">Tareitas</div>
+            <div id="btnActions">
+                <button id="minimizeBtn" class="btnAction"></button>
+                <button id="maximizeBtn" class="btnAction"></button>
+                <button id="closeBtn" class="btnAction"></button>
+            </div>
+        </div>
+        <div id="content"></div>
+        <div>
+            <h1>TAREAS DIARIAS</h1>
+        </div>
+        <div class="wrapper">
+            <div class="slider" id="slider">
+              <ul2 class="slides">
+                <li class="slide" id="slide1">
+                  <a href="#">v
+                    <p class="caption">Desayuno ideal</p>
+                    <img src="descarga1.jpg" alt="photo 1">
+                  </a>
+                </li>
+                <li class="slide" id="slide2">
+                  <a href="#">
+                    <p class="caption">Yo haciendo lo de walter</p>
+                    <img src="IKXKX47STFAYBJQSSPJUKYAABM.jpg" alt="photo 2">
+                  </a>
+                </li>
+                <li class="slide" id="slide3">
+                  <a href="#">
+                    <p class="caption">Yo todas las mañanas</p>
+                    <img src="images (1).jpg" alt="photo 3">
+                  </a>
+                </li>
+                <li class="slide" id="slide4">
+                  <a href="#">
+                    <p class="caption">Yo entrenando</p>
+                    <img src="images.jpg" alt="photo 4">
+                  </a>
+                </li>
+                </li>
+                <li class="slide">
+                  <a href="#">
+                    <p class="caption">Yo llegando tarde a git</p>
+                    <img src="descarga (1).jpg" alt="photo 5">
+                  </a>
+                </li>
+              </ul2>
+              <ul2 class="slider-controler">
+                <li><a href="#slide1">&bullet;</a></li>
+                <li><a href="#slide2">&bullet;</a></li>
+                <li><a href="#slide3">&bullet;</a></li>
+                <li><a href="#slide4">&bullet;</a></li>
+                <li><a href="#slide5">&bullet;</a></li>
+              </ul2>
+            </div>
+          </div>
+
+
+        <div id="Imagensita" style="background-color:rgb(255, 255, 255)"></div>
+
+            <div id="Azul" style="background-color:rgb(255, 255, 255);">
+
+                <p><b>Nombre:</b> <i>Ramiro</i></p>
+                <p><b>Apellido:</b> <i>Racedo</i></p>
+                <p><b>DNI:</b> <i>44.080.673</i></p>
+                <p><b>Edad:</b> <i>21</i></p>
+                <p><b>Direccion:</b> <i>General Roca 753</i></p>
+                <p><b>Correo:</b> <i>Ramiroracedo@gmail.com</i></p>
+                <p><b>Telefono:</b> <i>29726923217</i></p>
+            </div>
+            <div id="Listado">
+
+                <h1>Listadito</h1>
+                
+                <ul>
+                    <li>Levantarse <div><span class="ok">Seleccionar</span><span class="ko">Eliminar</span></div>
+                    </li>
+                    <li>Cepillarse los dientes <div><span class="ok">Seleccionar</span><span class="ko">Eliminar</span></div>
+                    </li>
+                    <li>Desayunar <div><span class="ok">Seleccionar</span><span class="ko">Eliminar</span></div>
+                    </li>
+                    <li>Bañarse <div><span class="ok">Seleccionar</span><span class="ko">Eliminar</span></div>
+                    </li>
+                    <li>Salir<div><span class="ok">Seleccionar</span><span class="ko">Eliminar</span></div>
+                    </li>
+                    <li>Trabajar <div><span class="ok">Seleccionar</span><span class="ko">Eliminar</span></div>
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            var list = document.querySelector('ul');
+
+            list.addEventListener('click', function (ev) {
+                if (ev.target.className == 'ok') {
+                    ev.target.parentNode.parentNode.classList.remove('ko');
+                    ev.target.parentNode.parentNode.classList.toggle('ok');
+                } else if (ev.target.className == 'ko') {
+                    ev.target.parentNode.parentNode.classList.remove('ok');
+                    ev.target.parentNode.parentNode.classList.toggle('ko');
+                }
+            }, false);
+
+        </script>
+
+</body>
+<footer>
+    <script>
+        function cambiarTrack(track) {
+            var path =  track.getAttribute("path")
+            viejo_audio = document.getElementById("reproductor")
+            audio_padre = viejo_audio.parentNode
+            audio_padre.removeChild(viejo_audio)
+            nuevo_audio = document.createElement("audio")
+            nuevo_audio.setAttribute("id","reproductor")
+            nuevo_audio.setAttribute("controls", "controls")
+           // nuevo_audio.setAttribute("autoplay", "autoplay")
+            source = document.createElement("source")
+            source.setAttribute("src", path)
+            source.setAttribute("type", "audio/mpeg")
+            source.setAttribute("id", "reproductorSource")
+            nuevo_audio.appendChild(source)
+            audio_padre.appendChild(nuevo_audio)}
+          function cargarReproductor() {
+            var select = document.getElementById("selectTrack")
+            var path = select.options[0].getAttribute("path")
+            nuevo_audio = document.createElement("audio")
+            nuevo_audio.setAttribute("id","reproductor")
+            nuevo_audio.setAttribute("controls", "controls")       
+            source = document.createElement("source")
+            source.setAttribute("src", path)
+            source.setAttribute("type", "audio/mpeg")
+            source.setAttribute("id", "reproductorSource")
+            nuevo_audio.appendChild(source)
+            padre = document.getElementById("reproductorBox")
+            padre.appendChild(nuevo_audio)
+          }
+    </script>             
+    <div id="reproductorBox"></div>
+
+    <select id = "selectTrack" multiple onchange="cambiarTrack(this.option[this.selectedIndex]);">
+        <option path="../musica\Panic_At_The_Disco_-_House_of_Memories_legitmuzic.com.mp3">Centuries</option>
+        <option path="../musica\Panic_At_The_Disco_-_House_of_Memories_legitmuzic.com.mp3">Disco</option>
+        <option path="../musica/Skillet-SOUNDOFNAIJA.COM-Hero.mp3">Heroe</option>
+        <option path="../musica\James Arthur - Impossible (Lyrics).mp3">Demonios</option>
+    </select>
+
+    <script>cargarReproductor();</script>
+    </div>
+</footer>
+
+</html>
+</div>
