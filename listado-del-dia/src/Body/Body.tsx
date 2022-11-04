@@ -1,4 +1,4 @@
-function Login() {
+function Body() {
     return (
 
         <div id="App">
@@ -15,12 +15,14 @@ function Login() {
                 <h1>TAREAS DIARIAS</h1>
             </div>
 
-            <div id="Imagensita" style="background-color:rgb(255, 255, 255)">
+            <div id="Imagensita">
 
-                <img src="imagen 1.jpg" height="250px" alt="Imagensita">
-                    <p>Listado</p>
+                <img src="imagen 1.jpg" height="250px" alt="Imagensita" />
+                <p>Listado</p>
 
-                    )
-    
+            </div>
+        </div>
+    )
+
 }
-                    export default Login
+export default Body
