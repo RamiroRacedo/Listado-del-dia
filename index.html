@@ -28,6 +28,51 @@
         <div>
             <h1>TAREAS DIARIAS</h1>
         </div>
+        <div class="wrapper">
+            <div class="slider" id="slider">
+              <ul2 class="slides">
+                <li class="slide" id="slide1">
+                  <a href="#">v
+                    <p class="caption">Desayuno ideal</p>
+                    <img src="descarga1.jpg" alt="photo 1">
+                  </a>
+                </li>
+                <li class="slide" id="slide2">
+                  <a href="#">
+                    <p class="caption">Yo haciendo lo de walter</p>
+                    <img src="IKXKX47STFAYBJQSSPJUKYAABM.jpg" alt="photo 2">
+                  </a>
+                </li>
+                <li class="slide" id="slide3">
+                  <a href="#">
+                    <p class="caption">Yo todas las mañanas</p>
+                    <img src="images (1).jpg" alt="photo 3">
+                  </a>
+                </li>
+                <li class="slide" id="slide4">
+                  <a href="#">
+                    <p class="caption">Yo entrenando</p>
+                    <img src="images.jpg" alt="photo 4">
+                  </a>
+                </li>
+                </li>
+                <li class="slide">
+                  <a href="#">
+                    <p class="caption">Yo llegando tarde a git</p>
+                    <img src="descarga (1).jpg" alt="photo 5">
+                  </a>
+                </li>
+              </ul2>
+              <ul2 class="slider-controler">
+                <li><a href="#slide1">&bullet;</a></li>
+                <li><a href="#slide2">&bullet;</a></li>
+                <li><a href="#slide3">&bullet;</a></li>
+                <li><a href="#slide4">&bullet;</a></li>
+                <li><a href="#slide5">&bullet;</a></li>
+              </ul2>
+            </div>
+          </div>
+
 
         <div id="Imagensita" style="background-color:rgb(255, 255, 255)"></div>
 
@@ -79,6 +124,50 @@
         </script>
 
 </body>
+<footer>
+    <script>
+        function cambiarTrack(track) {
+            var path =  track.getAttribute("path")
+            viejo_audio = document.getElementById("reproductor")
+            audio_padre = viejo_audio.parentNode
+            audio_padre.removeChild(viejo_audio)
+            nuevo_audio = document.createElement("audio")
+            nuevo_audio.setAttribute("id","reproductor")
+            nuevo_audio.setAttribute("controls", "controls")
+           // nuevo_audio.setAttribute("autoplay", "autoplay")
+            source = document.createElement("source")
+            source.setAttribute("src", path)
+            source.setAttribute("type", "audio/mpeg")
+            source.setAttribute("id", "reproductorSource")
+            nuevo_audio.appendChild(source)
+            audio_padre.appendChild(nuevo_audio)}
+          function cargarReproductor() {
+            var select = document.getElementById("selectTrack")
+            var path = select.options[0].getAttribute("path")
+            nuevo_audio = document.createElement("audio")
+            nuevo_audio.setAttribute("id","reproductor")
+            nuevo_audio.setAttribute("controls", "controls")       
+            source = document.createElement("source")
+            source.setAttribute("src", path)
+            source.setAttribute("type", "audio/mpeg")
+            source.setAttribute("id", "reproductorSource")
+            nuevo_audio.appendChild(source)
+            padre = document.getElementById("reproductorBox")
+            padre.appendChild(nuevo_audio)
+          }
+    </script>             
+    <div id="reproductorBox"></div>
+
+    <select id = "selectTrack" multiple onchange="cambiarTrack(this.option[this.selectedIndex]);">
+        <option path="../musica\Panic_At_The_Disco_-_House_of_Memories_legitmuzic.com.mp3">Centuries</option>
+        <option path="../musica\Panic_At_The_Disco_-_House_of_Memories_legitmuzic.com.mp3">Disco</option>
+        <option path="../musica/Skillet-SOUNDOFNAIJA.COM-Hero.mp3">Heroe</option>
+        <option path="../musica\James Arthur - Impossible (Lyrics).mp3">Demonios</option>
+    </select>
+
+    <script>cargarReproductor();</script>
+    </div>
+</footer>
 
 </html>
 </div>
